@@ -1,0 +1,12 @@
+# Ignore object files
+*.OBJ
+
+# Ignore executable files
+*.EXE
+
+# Ignore map files
+*.MAP
+
+# Ignore specific files
+.DS_Store
+.pre-commit-config.yaml
