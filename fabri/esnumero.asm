@@ -10,7 +10,7 @@
 public esnumero 
 
 	;Parametros:
-	; BL = offset del character a chequear
+	; BX = offset del character a chequear
 	;Returns:
 	; DL = 1 si es numero
 
@@ -19,13 +19,13 @@ public esnumero
 	mov dl, 0
 
 inicioComp:
-	cmp bl, 2Fh
+	cmp byte ptr[bx], 2Fh
 	ja casiNumero
 
 	jmp fin ;no es numero
 
 casiNumero:
-	cmp bl, 3Ah
+	cmp byte ptr[bx], 3Ah
 	jb numeroConfirmado
 	jmp fin
 
