@@ -9,8 +9,8 @@
 	numero db "7"
 	guionbajo db "_"
 	numBin db "00000000",0dh,0ah,24h
-	numReg db 129
-	numAscii db "000",0dh,0ah,24h
+	numReg db 42
+	numAscii db "00",0dh,0ah,24h
 
 	hexaString db "JA",0dh,0ah,24h
 
@@ -24,8 +24,10 @@
 .code
 
 extrn imprimir:proc
-extrn dec2ascii:proc
-extrn reg2bin:proc
+extrn esletra:proc
+;extrn hex2ascii:proc
+;extrn dec2ascii:proc
+;extrn bin2ascii:proc
 ;extrn asc2bin:proc	
 
 	main proc
@@ -38,25 +40,44 @@ extrn reg2bin:proc
 		;call asc2bin
 		
 		;decimal2ascii
-		mov al, 3
-		mov si, offset numAscii
-		add si, 2
-		mov bl, numReg
-		call dec2ascii
+		;mov al, 3
+		;mov si, offset numAscii
+		;add si, 2
+		;mov bl, numReg
+		;call dec2ascii
 
 
 		;binario2ascii
-		mov bx, offset numBin
-		add bx, 7
-		mov dl, numReg
-		call reg2bin
-
+		;mov bx, offset numBin
+		;add bx, 7
+		;mov dl, numReg
+		;call bin2ascii
 
 		;hexa2ascii
 
-		mov bx, offset numAscii
+		;mov dl, numReg
+		;mov bx, offset numAscii
+		;add bx, 1
+		;call hex2ascii
+
+		;esLetra
+		mov bx, offset letraMinus
+		call esletra
+
+		cmp dl, 1
+		je imprimirEsLetra
+		jmp imprimirNoEsLetra
+
+imprimirEsLetra:
+		mov bx, offset textoEsLetra
 		push bx
 		call imprimir
+		jmp fin
+imprimirNoEsLetra:		
+		mov bx, offset textoNoEsLetra
+		push bx
+		call imprimir
+
 
 		fin:
 			mov ax,4c00h

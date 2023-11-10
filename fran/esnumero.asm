@@ -9,10 +9,10 @@
 
 public esnumero 
 
-	;Parametros:
-	; BX = offset del character a chequear
-	;Returns:
-	; DL = 1 si es numero
+	;PARAMETRO:
+		; BX = offset del character a chequear
+	;RETORNA:
+		; DL = 1 si es numero
 
 	esnumero proc
 

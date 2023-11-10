@@ -9,31 +9,31 @@
 
 public esletra 
 
-	;Parametros:
-	; BL = offset del character a chequear
-	;Returns:
-	; DL = 1 si es letra
+	;PARAMETROS:
+		; BX = offset del character a chequear
+	;RETIORNA:
+		; DL = 1 si es letra
 
 	esletra proc
 
 	mov dl, 0
 
 inicioComp:
-	cmp bl, 60h
+	cmp byte ptr[bx], 60h
 	ja casiMinus
 
-	cmp bl, 40h
+	cmp byte ptr[bx], 40h
 	ja casiMayus
 
 	jmp fin ;no es letra 
 
 casiMayus:
-	cmp bl, 5Bh
+	cmp byte ptr[bx], 5Bh
 	jb letraConfirmada
 	jmp fin
 
 casiMinus:
-	cmp bl, 7Bh
+	cmp byte ptr[bx], 7Bh
 	jb letraConfirmada
 	jmp fin ;no es letra
 

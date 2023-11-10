@@ -10,7 +10,7 @@ public asc2bin
 		; RECIBE 1 BYTE "00000000", 0dh
 		; BX = OFFSET STRING ORIGEN
 		; DEBE TERMINAR CON UN 0dh
-		;RETORNA
+	;RETORNA
 		; DL = REGISTRO 
 
 asc2bin proc

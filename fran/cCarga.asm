@@ -8,13 +8,11 @@
 .code
 
 public cajaCarga
-	;RECIBE EL OFFSET DE UNA VARIABLE A LLENAR EN BX (MOV BX, OFFSET VAR / LEA BX, VAR)
-	;LA FUNCION RECIBE PARAMETRO POR DL 
+	;PARAMETRO
+		;BX = OFFSET STRING DESTINO
+		;DL = CARACTER DE CORTE (0dh, 24h)
 
 	proc cajaCarga
-	
-	; Antes de llamar a la funcion muevo a dl el caracter con el que quiero terminar
-	; la caja de carga. 
 	
 	push ax
 

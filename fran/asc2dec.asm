@@ -8,10 +8,10 @@
 
 public asc2dec
 	;PARAMETROS:
-	;BX = Offset del string de 3 digitos ascii como maximo.
-	;SI = Cantidad de cifras: 1, 2 o 3
-
-	;RETORNA: Numero decimal en CL
+	   ;BX = OFFSET STRING ORIGEN (HASTA "000").
+	   ;SI = CANT. CIFRAS: 0, 1, 2
+	;RETORNA: 
+       ;CL = REGISTRO
 
 	proc asc2dec
 
@@ -34,7 +34,6 @@ public asc2dec
 
         mov dl, cifras[si]
         dec si
-        ;mov dl, 100
         mul dl 
         add cl, al 
         inc bx
@@ -43,7 +42,6 @@ public asc2dec
         mov al, [bx]
         mov dl, cifras[si]
         dec si
-        ;mov dl, 10
         mul dl
         add cl, al
         inc bx

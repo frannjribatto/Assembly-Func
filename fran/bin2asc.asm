@@ -8,9 +8,9 @@
 		;DL = ES EL REGISTRO ORIGEN
 .code
 
-public reg2bin
+public bin2ascii
 
-	reg2bin proc
+	bin2ascii proc
 
 	push bp
 	mov bp,sp
@@ -37,5 +37,5 @@ loop convierto
 	pop bp
 
 	ret 2
-	reg2bin endp
+	bin2ascii endp
 end

@@ -6,10 +6,10 @@
 .code
 
 	public ascii2hex
-	;Parametros:
-		;BX = offset string (APUNTANDO AL FINAL)
-	;Retorna:
-		;DL = numero hexa
+	;PARAMETROS:
+		;BX = OFFSET STRING (APUNTANDO AL FINAL)
+	;RETORNA:
+		;DL = NUMERO HEXA EN REGISTRO
 
 	ascii2hex proc
 

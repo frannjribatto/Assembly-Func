@@ -4,13 +4,13 @@
 .data
 	;PARAMETROS
 		;PROGRAMA PARA UN BYTE ("00000000")
-		;BX = OFFSET STRING BINARIO APUNTANDO AL FINAL (add bx, 7 en main) 
+		;BX = OFFSET STRING BINARIO DESTINO APUNTANDO AL FINAL (add bx, 7 en main) 
 		;DL = ES EL REGISTRO ORIGEN
 .code
 
-public reg2bin
+public bin2ascii
 
-	reg2bin proc
+	bin2ascii proc
 
 	push bp
 	mov bp,sp
@@ -37,5 +37,5 @@ loop convierto
 	pop bp
 
 	ret 2
-	reg2bin endp
+	bin2ascii endp
 end
