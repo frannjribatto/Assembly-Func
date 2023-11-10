@@ -7,12 +7,14 @@
 
 public bin2reg
 
+
 ;esta funcion convierte un binario en un reg
 ;recibe el offset de la variable donde va a guardar la conversion por BX
 ;defino una variable con lo que debo sumar en caso de encontrar un 1 en cada posicion
 
+;1000 0000 = 128 en registro
 
-	bin2reg proc
+bin2reg proc
 	
 	push ax
 	push si

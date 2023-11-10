@@ -14,7 +14,7 @@ public ascii2reg
 
 	mov si, 0
 	mov ax, 0
-	mov dl, 10
+	;mov dl, 10
 convierto:
 	cmp byte ptr[bx], 0dh
 	je fin

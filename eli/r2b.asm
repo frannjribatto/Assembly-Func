@@ -2,12 +2,14 @@
 .model small
 .stack 100h
 .data
-		
+	;PARAMETROS
+		;PROGRAMA PARA UN BYTE ("00000000")
+		;BX = OFFSET STRING BINARIO APUNTANDO AL FINAL (add bx, 7 en main) 
+		;DL = ES EL REGISTRO ORIGEN
 .code
 
 public reg2bin
 
-;recibe en bx el offset apuntado al final
 	reg2bin proc
 
 	push bp
