@@ -9,7 +9,7 @@
 public asc2dec
 	;PARAMETROS:
 	   ;BX = OFFSET STRING ORIGEN (HASTA "000").
-	   ;SI = CANT. CIFRAS: 0, 1, 2
+	   ;SI = CANT. CIFRAS: 1, 2, 3
 	;RETORNA: 
        ;CL = REGISTRO
 
